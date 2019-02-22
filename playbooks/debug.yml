@@ -5,5 +5,5 @@
     - name: Output group names
       debug: var=group_names
 
-    - name: Output host interfaces
-      debug: var=ansible_facts.interfaces
+    - name: Output host ansible facts
+      debug: var=ansible_facts.env
