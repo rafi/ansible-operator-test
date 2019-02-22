@@ -2,21 +2,21 @@
 
 > Ansible dummy playbooks for testing [Ansible operator].
 
-## Usage
+## 🛠 Usage
 
-## Developer Guide
+## 💾 Developer Guide
 
 ### Prerequisites
 
-## See Also
+## 📢 See Also
 
 [ansible-operator], [ansible-operator-ui]
 
-## Contributors
+## 🕺 Contributors
 
 - [Rafael Bodill](https://github.com/rafi)
 
-## License
+## 📃 License
 
 Apache License 2.0
 
