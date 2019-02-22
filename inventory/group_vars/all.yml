@@ -1,0 +1,37 @@
+---
+
+bootstrap_ufw: false
+bootstrap_secure_disable_root: false
+bootstrap_ntp_enable_daemon: true
+
+bootstrap_ssh_port: 22
+bootstrap_timezone: Etc/UTC
+bootstrap_locales:
+  - name: en_US.UTF-8
+    charset: UTF-8
+    default: true
+
+user_groups:
+  - name: sudo
+    sudo_nopasswd: yes
+  - name: bots
+  - name: staff
+
+users:
+  - name: deploy
+    primary_group: bots
+    groups: [ sudo, staff, docker ]
+    generate_ssh_key: yes
+    authorized:
+      - rafi.pub
+      - bob.pub
+  - name: rafi
+    primary_group: staff
+    groups: [ sudo, bots, docker ]
+    authorized:
+      - rafi.pub
+  - name: bob
+    primary_group: staff
+    groups: [ sudo, bots, docker ]
+    authorized:
+      - bob.pub

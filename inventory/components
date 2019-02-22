@@ -1,0 +1,14 @@
+
+# Components
+# ===
+
+[local]
+localhost  ansible_connection=local ansible_python_interpreter=python
+
+[all]
+# worker-01 ansible_host=1.2.3.4  host_private_ip=192.1.2.3
+
+[cluster]
+# worker-01
+
+[database]
